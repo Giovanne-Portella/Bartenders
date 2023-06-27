@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bartender's Choice</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header class="menu">
+    <section class="espacamento_menu menuFLEX">
+      <h1>Bartender's Choice</h1>
+      <nav>
+        <ul>
+          <li>Página Inicial</li>
+          <li> <a href="#" class="modal-trigger">Sobre nós</a>
+            <div class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Quem somos nós?</h2><br>
+                <p>"Bartender's Choice" é uma loja virtual de produtos para bartenders que deseja criar uma plataforma online para conectar pessoas que buscam bartenders qualificados. A plataforma permitirá aos usuários encontrar bartenders por meio de perfis com informações detalhadas, incluindo fotos e avaliações. Os bartenders poderão criar contas personalizadas para promover seus serviços e habilidades. O objetivo é preencher a lacuna entre a demanda e a oferta de bartenders qualificados, fornecendo uma solução eficiente e fácil de usar para os usuários.</p>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="modal-trigger1">Contato</a>
+            <div class="modal1">
+              <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <h2>Contato</h2><br>
+                <p>Número de telefone: (555) 123-4567</p>
+                <p>Email: info@bartenderschoice.com
+                </p>
+                <p>Endereço: Rua dos Coquetéis, 123, Cidade dos Sabores, Estado dos Drinks, 98765-432</p>
+                  
+              </div>
+            </div></li>
+
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <section class="form">
+    <h2>Seja bem vindo(a) ao Bartender's Choice</h2><br>
+    <p>Encontre bartenders pertinho de você!</p>
+    <form id="searchForm">
+      <div>
+        <input id="searchInput" type="text" id="searchInput" placeholder="Buscar por nome">
+        <select id="locationSelect">
+          <option value="all">Todas as Localidades</option>
+          <option value="Canoas">Canoas</option>
+          <option value="Porto Alegre">Porto Alegre</option>
+          <option value="São Leopoldo">São Leopoldo</option>
+          <option value="Novo Hamburgo">Novo Hamburgo</option>
+          <option value="Esteio">Esteio</option>
+          <option value="Nova Santa Rita">Nova Santa Rita</option>
+
+        </select>
+      </div>
+      <div>
+        <select id="specializationSelect">
+          <option value="all">Todas as Especialidades</option>
+          <option value="Coquetéis Clássicos">Coquetéis Clássicos</option>
+          <option value="Coquetéis Tropicais">Coquetéis Tropicais</option>
+          <option value="Mixologia Molecular">Mixologia Molecular</option>
+          <option value="Coquetelaria Autoral">Coquetelaria Autoral</option>
+          <option value="Coquetelaria Clássica">Coquetelaria Clássica</option>
+        </select>
+        <button id="searchButton" type="submit">Buscar</button>
+    </form>
+    </div>
+  </section>
+  <section id="bartenderList"> </section>
+
+  <script src="app.js">
+
+  </script>
+
+  <script src="script.js">
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>
