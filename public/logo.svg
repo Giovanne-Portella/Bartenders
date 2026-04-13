@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="250" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="3"/>
+  
+  <!-- Subtle inner ring -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Cocktail glass - martini shape -->
+  <g filter="url(#glow)" transform="translate(256, 220)">
+    <!-- Glass bowl (triangle) -->
+    <polygon points="0,-95 75,-10 -75,-10" fill="none" stroke="url(#glassGrad)" stroke-width="4" stroke-linejoin="round"/>
+    
+    <!-- Liquid inside glass -->
+    <polygon points="-50,-42 50,-42 75,-10 -75,-10" fill="url(#liquidGrad)" opacity="0.6"/>
+    
+    <!-- Glass stem -->
+    <line x1="0" y1="-10" x2="0" y2="60" stroke="url(#glassGrad)" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Glass base -->
+    <line x1="-35" y1="60" x2="35" y2="60" stroke="url(#glassGrad)" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Olive/cherry on rim -->
+    <circle cx="30" cy="-55" r="8" fill="#f97316" opacity="0.9"/>
+    <circle cx="30" cy="-55" r="5" fill="#fbbf24" opacity="0.6"/>
+    
+    <!-- Cocktail pick -->
+    <line x1="15" y1="-75" x2="40" y2="-40" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Sparkle left -->
+    <g transform="translate(-60, -70)" opacity="0.7">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Sparkle right -->
+    <g transform="translate(65, -80)" opacity="0.5">
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#fcd34d" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Small sparkle -->
+    <g transform="translate(-80, -40)" opacity="0.4">
+      <line x1="0" y1="-4" x2="0" y2="4" stroke="#fcd34d" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="#fcd34d" stroke-width="1" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Text: BARTENDER'S -->
+  <text x="256" y="370" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="6" fill="url(#textGrad)">
+    BARTENDER'S
+  </text>
+  
+  <!-- Text: CHOICE -->
+  <text x="256" y="415" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="36" font-weight="300" letter-spacing="12" fill="#e2e8f0">
+    CHOICE
+  </text>
+
+  <!-- Decorative line left -->
+  <line x1="90" y1="435" x2="200" y2="435" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <!-- Decorative diamond center -->
+  <polygon points="256,430 261,435 256,440 251,435" fill="#fbbf24" opacity="0.6"/>
+  <!-- Decorative line right -->
+  <line x1="312" y1="435" x2="422" y2="435" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Tagline -->
+  <text x="256" y="460" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="3" fill="#94a3b8" opacity="0.8">
+    PORTO ALEGRE • RS
+  </text>
+</svg>
